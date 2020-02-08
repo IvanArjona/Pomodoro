@@ -1,11 +1,13 @@
 <template>
   <footer class="footer d-flex justify-content-between">
-    <span @click="showHistory()">History</span>
-    <span @click="startNew()">Start a new pomodoro</span>
+    <History/>
+    <span class="pointer" @click="startNew()">Start a new pomodoro</span>
   </footer>
 </template>
 
 <script>
+import History from './History';
+
 export default {
   methods: {
     startNew() {
@@ -14,6 +16,9 @@ export default {
     showHistory() {
 
     }
+  },
+  components: {
+    History
   }
 }
 </script>
@@ -24,8 +29,5 @@ export default {
   bottom: 0;
   padding: 1rem;
   width: 100%;
-}
-.footer > span {
-  cursor: pointer;
 }
 </style>

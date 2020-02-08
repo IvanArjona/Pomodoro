@@ -79,4 +79,7 @@ body {
   background-color: #C55E5E;
   color: white;
 }
+.pointer {
+  cursor: pointer;
+}
 </style>

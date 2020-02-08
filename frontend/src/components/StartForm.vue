@@ -21,8 +21,8 @@
       <small class="form-text muted">In minutes</small>
     </div>
     <div class="form-group">
-      <label for="long-break">Long break after</label>
-      <input type="number" id="long-break" class="form-control" min="1" v-model="longBreakAfter">
+      <label for="long-break-after">Long break after</label>
+      <input type="number" id="long-break-after" class="form-control" min="1" v-model="longBreakAfter">
       <small class="form-text muted">In pomodoros</small>
     </div>
     <button type="submit" class="btn btn-primary">Start</button>
