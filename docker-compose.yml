@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+  backend:
+    build: ./backend
+    command: python manage.py runserver 0.0.0.0:8086
+    env_file: .env
+    ports:
+      - "8086:8086"
+    depends_on:
+      - db
