@@ -1,9 +1,9 @@
 <template>
   <div>
     <p class="countdown">{{ countdown }}</p>
-    <button type="submit" class="btn btn-primary" v-if="ended" @click.prevent="nextTimer()">
+    <button type="submit" class="btn btn-primary" @click.prevent="nextTimer()">
       Start
-      <TimerDescription :pomodoros="pomodoros + 1"/>
+      <TimerDescription :pomodoros="pomodoros + 1" :longBreakAfter="longBreakAfter"/>
     </button>
   </div>
 </template>
@@ -16,7 +16,8 @@ export default {
   name: 'Timer',
   props: {
     duration: Number,
-    pomodoros: Number
+    pomodoros: Number,
+    longBreakAfter: Number,
   },
   data() {
     return {

@@ -6,12 +6,13 @@
     <template v-else>
       <h1 class="task text-center">{{ task }}</h1>
       <h2>
-        <TimerDescription :pomodoros="timerCount"/>
+        <TimerDescription :pomodoros="timerCount" :longBreakAfter="longBreakAfter"/>
       </h2>
       <Timer
           :key="timerCount"
           :duration="pomodoroTime"
           :pomodoros="timerCount"
+          :longBreakAfter="longBreakAfter"
           @next="nextTimer()"/>
     </template>
     <Footer
@@ -55,7 +56,7 @@ export default {
         this.pomodoroTime = this.duration;
       } else {
         // Break
-        this.pomodoroTime = timerCount / 2 % this.longBreakAfter ? this.shortBreakDuration : this.longBreakDuration;
+        this.pomodoroTime = timerCount / 2 % this.longBreakAfter != 0 ? this.shortBreakDuration : this.longBreakDuration;
       }
       this.timerCount = timerCount;
       this.saveHistory();
@@ -68,14 +69,12 @@ export default {
         task: this.task,
         duration: this.pomodoroTime,
         start: moment(),
-        timer_type_id: this.pomodoros % 2 != 0 ? 1 : (this.pomodoros / 2 % this.longBreakAfter ? 2 : 3)
+        timer_type_id: this.timerCount % 2 != 0 ? 1 : (this.timerCount / 2 % this.longBreakAfter != 0 ? 2 : 3)
       }
       fetch('http://localhost:8000/api/timers', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' }
-      }).then((res) => {
-        return res.json();
       });
     }
   },
