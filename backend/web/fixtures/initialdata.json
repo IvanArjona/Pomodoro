@@ -1,0 +1,26 @@
+[
+  {
+    "model": "web.TimerType",
+    "pk": 1,
+    "fields": {
+      "name": "Pomodoro",
+      "work": "1"
+    }
+  },
+  {
+    "model": "web.TimerType",
+    "pk": 2,
+    "fields": {
+      "name": "Short break",
+      "work": "0"
+    }
+  },
+  {
+    "model": "web.TimerType",
+    "pk": 3,
+    "fields": {
+      "name": "Long break",
+      "work": "0"
+    }
+  }
+]
