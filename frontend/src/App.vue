@@ -13,6 +13,8 @@
           :pomodoros="timerCount"
           @next="nextTimer()"/>
     </template>
+    <Footer
+        @reset="reset()"/>
   </div>
 </template>
 
@@ -20,6 +22,7 @@
 import StartForm from './components/StartForm.vue'
 import Timer from './components/Timer.vue'
 import TimerDescription from './components/TimerDescription.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
@@ -30,7 +33,6 @@ export default {
       shortBreakDuration: null,
       longBreakDuration: null,
       longBreakAfter: null,
-      breakCount: 0,
       timerCount: 0,
       pomodoroTime: null,
     }
@@ -54,12 +56,16 @@ export default {
         this.pomodoroTime = timerCount / 2 % this.longBreakAfter ? this.shortBreakDuration : this.longBreakDuration;
       }
       this.timerCount = timerCount;
+    },
+    reset() {
+      this.timerCount = 0;
     }
   },
   components: {
     StartForm,
     Timer,
-    TimerDescription
+    TimerDescription,
+    Footer,
   }
 }
 </script>
