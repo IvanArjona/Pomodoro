@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="submit()">
+  <form class="form" @submit.prevent="submit()">
     <h1>Start a pomodoro</h1>
     <div class="form-group">
       <label for="task">Task</label>
@@ -25,7 +25,7 @@
       <input type="number" id="long-break-after" class="form-control" min="1" v-model="longBreakAfter">
       <small class="form-text muted">In pomodoros</small>
     </div>
-    <button type="submit" class="btn btn-primary">Start</button>
+    <button type="submit" class="btn btn-light">Start</button>
   </form>
 </template>
 
@@ -57,5 +57,10 @@ export default {
 <style>
 .muted {
   color: #dcdcdc !important;
+}
+.form {
+  padding: 2rem;
+  background-color: #da7070;
+  border-radius: .5rem;
 }
 </style>

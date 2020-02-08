@@ -1,4 +1,4 @@
-# frontend
+# Pomodoro
 
 ## Project setup
 ```

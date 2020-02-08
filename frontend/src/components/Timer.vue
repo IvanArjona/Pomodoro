@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="text-center">
     <p class="countdown">{{ countdown }}</p>
-    <button type="submit" class="btn btn-primary" @click.prevent="nextTimer()">
+    <button type="submit" class="btn btn-light" v-if="ended" @click.prevent="nextTimer()">
       Start
       <TimerDescription :pomodoros="pomodoros + 1" :longBreakAfter="longBreakAfter"/>
     </button>
@@ -61,5 +61,7 @@ export default {
 <style scoped>
 .countdown {
   font-size: 5rem;
+  font-weight: 500;
+  text-shadow: 1px 1px lightgrey;
 }
 </style>
