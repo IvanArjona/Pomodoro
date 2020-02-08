@@ -10,6 +10,6 @@ class Timer(models.Model):
     task = models.CharField(max_length=128)
     duration = models.DurationField()
     start = models.DateTimeField(auto_now=True)
-    end = models.DateTimeField()
+    end = models.DateTimeField(null=True)
     timer_type = models.ForeignKey(TimerType, on_delete=models.CASCADE)
 
