@@ -26,6 +26,11 @@ export default {
     }
   },
   methods: {
+    notificationSound() {
+      const audioFile = require('../assets/bell.mp3');
+      const audio = new Audio(audioFile);
+      audio.play();
+    },
     startTimer() {
       const start = moment(this.duration, 'm');
       let seconds = start.minutes() * 60;
@@ -35,6 +40,7 @@ export default {
         if (seconds === 0) {
           clearInterval(this.interval);
           this.ended = true;
+          this.notificationSound();
         }
       }, 1000);
     },
