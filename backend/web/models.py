@@ -8,8 +8,7 @@ class TimerType(models.Model):
 
 class Timer(models.Model):
     task = models.CharField(max_length=128)
-    duration = models.DurationField()
+    duration = models.IntegerField()
     start = models.DateTimeField(auto_now=True)
-    end = models.DateTimeField(null=True)
     timer_type = models.ForeignKey(TimerType, on_delete=models.CASCADE)
 

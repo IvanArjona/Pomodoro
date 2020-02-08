@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import moment from 'moment';
 import StartForm from './components/StartForm.vue'
 import Timer from './components/Timer.vue'
 import TimerDescription from './components/TimerDescription.vue'
@@ -56,9 +57,25 @@ export default {
         this.pomodoroTime = timerCount / 2 % this.longBreakAfter ? this.shortBreakDuration : this.longBreakDuration;
       }
       this.timerCount = timerCount;
+      this.saveHistory();
     },
     reset() {
       this.timerCount = 0;
+    },
+    saveHistory() {
+      const data = {
+        task: this.task,
+        duration: this.pomodoroTime,
+        start: moment(),
+        timer_type_id: this.pomodoros % 2 != 0 ? 1 : (this.pomodoros / 2 % this.longBreakAfter ? 2 : 3)
+      }
+      fetch('http://localhost:8000/api/timers', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: { 'Content-Type': 'application/json' }
+      }).then((res) => {
+        return res.json();
+      });
     }
   },
   components: {
