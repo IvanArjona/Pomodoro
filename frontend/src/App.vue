@@ -4,6 +4,7 @@
         v-if="timerCount === 0"
         @submit="startPomodoro($event)"/>
     <template v-else>
+      <h1 class="task text-center">{{ task }}</h1>
       <h2>
         <TimerDescription :pomodoros="timerCount"/>
       </h2>
@@ -98,5 +99,11 @@ body {
 }
 .pointer {
   cursor: pointer;
+}
+.task {
+  position: absolute;
+  top: 0;
+  padding: 1rem;
+  width: 100%;
 }
 </style>
