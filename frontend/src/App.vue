@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app p-3 d-flex flex-column justify-content-center align-items-center">
     <StartForm
         v-if="timerCount === 0"
         @submit="startPomodoro($event)"/>
@@ -65,5 +65,12 @@ export default {
 </script>
 
 <style>
-
+body {
+  height: 100vh;
+}
+.app {
+  height: 100vh;
+  background-color: #C55E5E;
+  color: white;
+}
 </style>

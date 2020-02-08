@@ -1,6 +1,5 @@
 <template>
   <div>
-    {{seconds}}
     <p class="countdown">{{ countdown }}</p>
     <button type="submit" class="btn btn-primary" v-if="ended" @click.prevent="nextTimer()">
       Start

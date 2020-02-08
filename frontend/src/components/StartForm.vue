@@ -8,22 +8,22 @@
     <div class="form-group">
       <label for="duration">Pomodoro duration</label>
       <input type="number" id="duration" class="form-control" min="1" v-model="duration">
-      <small class="form-text text-muted">In minutes</small>
+      <small class="form-text muted">In minutes</small>
     </div>
     <div class="form-group">
       <label for="short-break">Short break duration</label>
       <input type="number" id="short-break" class="form-control" min="1" v-model="shortBreakDuration">
-      <small class="form-text text-muted">In minutes</small>
+      <small class="form-text muted">In minutes</small>
     </div>
     <div class="form-group">
       <label for="long-break">Long break duration</label>
       <input type="number" id="long-break" class="form-control" min="1" v-model="longBreakDuration">
-      <small class="form-text text-muted">In minutes</small>
+      <small class="form-text muted">In minutes</small>
     </div>
     <div class="form-group">
       <label for="long-break">Long break after</label>
       <input type="number" id="long-break" class="form-control" min="1" v-model="longBreakAfter">
-      <small class="form-text text-muted">In pomodoros</small>
+      <small class="form-text muted">In pomodoros</small>
     </div>
     <button type="submit" class="btn btn-primary">Start</button>
   </form>
@@ -55,5 +55,7 @@ export default {
 </script>
 
 <style>
-
+.muted {
+  color: #dcdcdc !important;
+}
 </style>
