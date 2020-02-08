@@ -44,10 +44,10 @@ export default {
     submit() {
       this.$emit('submit', {
         task: this.task,
-        duration: this.duration,
-        shortBreakDuration: this.shortBreakDuration,
-        longBreakDuration: this.longBreakDuration,
-        longBreakAfter: this.longBreakAfter,
+        duration: parseInt(this.duration),
+        shortBreakDuration: parseInt(this.shortBreakDuration),
+        longBreakDuration: parseInt(this.longBreakDuration),
+        longBreakAfter: parseInt(this.longBreakAfter),
       })
     }
   }
