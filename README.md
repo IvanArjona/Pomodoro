@@ -37,13 +37,16 @@ Run migrations
 
 Execute fixtures
 
-`python manage.py loaddata web/fixtures/initialdata.json`
+```
+python manage.py loaddata web/fixtures/initialdata.json
+python manage.py loaddata web/fixtures/exampletasks.json
+```
 
 Start server
 
 `python manage.py runserver`
 
-Backend should be accessible throught [http://localhost:8000](http://localhost:8000)
+Backend should be accessible through [http://localhost:8000](http://localhost:8000)
 
 # Frontend
 
@@ -53,7 +56,7 @@ Go to frontend directory
 
 `cd frontend`
 
-Install dependencies throught npm
+Install dependencies through npm
 
 `npm install`
 
@@ -61,4 +64,4 @@ Start serving
 
 `npm run serve`
 
-Should be accessible throught [http://localhost:8080](http://localhost:8080)
+Should be accessible through [http://localhost:8080](http://localhost:8080)

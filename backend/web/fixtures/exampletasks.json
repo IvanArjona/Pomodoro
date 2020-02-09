@@ -1,0 +1,82 @@
+[
+  {
+    "model": "web.Timer",
+    "pk": 1,
+    "fields": {
+      "task": "Example task 1",
+      "duration": "25",
+      "start": "2020-02-09 11:00",
+      "timer_type_id": "1"
+    }
+  },
+  {
+    "model": "web.Timer",
+    "pk": 2,
+    "fields": {
+      "task": "Example task 1",
+      "duration": "5",
+      "start": "2020-02-09 11:25",
+      "timer_type_id": "2"
+    }
+  },
+  {
+    "model": "web.Timer",
+    "pk": 3,
+    "fields": {
+      "task": "Example task 1",
+      "duration": "25",
+      "start": "2020-02-09 11:30",
+      "timer_type_id": "1"
+    }
+  },
+  {
+    "model": "web.Timer",
+    "pk": 4,
+    "fields": {
+      "task": "Example task 1",
+      "duration": "15",
+      "start": "2020-02-09 11:55",
+      "timer_type_id": "3"
+    }
+  },
+  {
+    "model": "web.Timer",
+    "pk": 5,
+    "fields": {
+      "task": "Example task 1",
+      "duration": "25",
+      "start": "2020-02-09 12:10",
+      "timer_type_id": "1"
+    }
+  },
+  {
+    "model": "web.Timer",
+    "pk": 6,
+    "fields": {
+      "task": "Example task 2",
+      "duration": "25",
+      "start": "2020-02-09 17:15",
+      "timer_type_id": "1"
+    }
+  },
+  {
+    "model": "web.Timer",
+    "pk": 7,
+    "fields": {
+      "task": "Example task 2",
+      "duration": "15",
+      "start": "2020-02-09 17:40",
+      "timer_type_id": "2"
+    }
+  },
+  {
+    "model": "web.Timer",
+    "pk": 8,
+    "fields": {
+      "task": "Example task 2",
+      "duration": "25",
+      "start": "2020-02-09 17:55",
+      "timer_type_id": "1"
+    }
+  }
+]
