@@ -65,3 +65,13 @@ Start serving
 `npm run serve`
 
 Should be accessible through [http://localhost:8080](http://localhost:8080)
+
+# Screenshots
+
+![Start a pomodoro](screenshots/start.png)
+
+![Timer](screenshots/timer.png)
+
+![Short break](screenshots/break.png)
+
+![History](screenshots/history.png)
