@@ -70,16 +70,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'pomodoro',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
+        'USER': 'pomodoro',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
         'PORT': 3306
-        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # 'NAME': os.environ['DB_NAME'],
-        # 'USER': os.environ['DB_USER'],
-        # 'PASSWORD': os.environ['DB_PASS'],
-        # 'HOST': os.environ['DB_SERVICE'],
-        # 'PORT': os.environ['DB_PORT']
     }
 }
 
